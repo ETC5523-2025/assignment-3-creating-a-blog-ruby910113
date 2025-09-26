@@ -1,14 +1,18 @@
 ---
-title: "ETC5523 Blog Assessment"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
+title: "Welcome To Ting-Ting's Blog 👋"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
+
+This site collects my work in **data analysis and visualization**. Beyond coursework, I’ll keep adding personal projects, learning notes, and experimental ideas, turning data into clear stories with an emphasis on **reproducibility** and **versioned workflows**.
+
+You’ll find:  
+- Data cleaning and exploratory analysis (EDA)  
+- Visualization and communication  
+- Spatial and time-series analyses across domains   
+
+Curious? Start with the blog 👇
+
+[Enter the Blog →](blog.html){.btn .btn-primary .mt-2 role="button"}
 
 

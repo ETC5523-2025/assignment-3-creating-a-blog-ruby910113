@@ -12,7 +12,6 @@ about:
     - icon: linkedin            
       text: LinkedIn
       href: https://www.linkedin.com/in/ting-ting-wu-537144387/
-
 ---
 
 Hi, my name is Ting-Ting Wu, but you can also call me Ruby (I actually prefer Ruby).
