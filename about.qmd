@@ -1,13 +1,46 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Ting-Ting, Wu"
+page-layout: full
+image: image/profile.jpeg
 about:
-  template: jolla
+  template: solana        
+  image-shape: round     
   links:
     - icon: github
       text: Github
-      href: https://github.com/etc5523-2022
+      href: https://github.com/ruby910113
+    - icon: linkedin            
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ting-ting-wu-537144387/
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+Hi, my name is Ting-Ting Wu, but you can also call me Ruby (I actually prefer Ruby).
+
+I’m Taiwanese and did my undergraduate studies in Taiwan. After finishing my studies in Auckland in 2023 and 2024, I came to Australia in 2025 to continue my education.
+
+My interests include hiking, traveling, and watching anime. Feel free to reach out if you’d like to hang out or go on an adventure together!!!
+
+## Education
+
+**Monash University**  
+Master of Business Analytics  
+Mar 2025 - Present | Melbourne, Australia
+
+**University of Auckland**  
+Exchange Program - Business Administration  
+Jul 2023 - Jul 2024 | Auckland, New Zealand
+
+**Providence University**  
+Bachelor of International Business Administration  
+Jul 2021 - May 2023 | Taichung, Taiwan
+
+## Experience
+
+**PwC Taiwan**  
+Accounting Intern  
+Jun 2023 - Aug 2023 | Taichung, Taiwan
+
+**Rhinoshield**  
+Finance & Accounting Intern  
+Feb 2022 - May 2022 | Taichung, Taiwan
