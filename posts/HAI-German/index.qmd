@@ -1,0 +1,6 @@
+---
+title: "How Big Is Germany’s HAI Burden?"
+author: "Ting-Ting, Wu"
+date: "2025-09-27"
+categories: [HAI, R]
+---
