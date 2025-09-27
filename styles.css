@@ -1,8 +1,11 @@
-.navbar-dark, .quarto-title-banner {background-color: #283618;}
-.quarto-title-banner .title { color: #e8f3ec; }
+.navbar-dark, .quarto-title-banner {
+  background-color: #283618;
+  padding-top: 4rem;
+  padding-bottom: 2.2rem;}
+.quarto-title-banner .title { color: #fafaf7; }
 
 body { background-color: #fafaf7; }
-img { border: 4px solid #283618;}
+img { border: 4px solid #283618; }
 h1, h2 {
   color: #283618;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
@@ -15,4 +18,7 @@ h1, h2 {
   margin-top: 1.2rem;
 }
 
-
+.quarto-title-banner .quarto-categories .quarto-category {
+  color: #fafaf7;
+  border-color: rgba(250,250,247,0.85);
+}
