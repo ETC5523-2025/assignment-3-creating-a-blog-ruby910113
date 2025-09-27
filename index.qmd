@@ -1,9 +1,15 @@
 ---
-title: "Welcome To Ting-Ting's Blog 👋"
 page-layout: full
 title-block-banner: false
 ---
-
+<br>
+<br>
+<p style="text-align:center;">
+  <img src="image/index.png" style="max-width:100%; height:auto; width:1200px;">
+</p>
+<br>
+<br>
+<br>
 This site collects my work in **data analysis and visualization**. Beyond coursework, I’ll keep adding personal projects, learning notes, and experimental ideas, turning data into clear stories with an emphasis on **reproducibility** and **versioned workflows**.
 
 You’ll find:  
@@ -14,5 +20,3 @@ You’ll find:
 Curious? Start with the blog 👇
 
 [Enter the Blog →](blog.html){.btn .btn-primary .mt-2 role="button"}
-
-
