@@ -19,4 +19,4 @@ You’ll find:
 
 Curious? Start with the blog 👇
 
-[Enter the Blog →](blog.html){.btn .btn-primary .mt-2 role="button"}
+[Enter the Blog →](blog.html){.btn .btn-primary .mt-2 role="button" style="background-color:#283618;border-color:#283618;"}
