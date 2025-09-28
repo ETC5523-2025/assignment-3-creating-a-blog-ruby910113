@@ -1,6 +1,66 @@
 ---
-title: "How Big Is Germany’s HAI Burden?"
+title: "Germany’s Hidden Hospital Burden: What HAIs Really Cost"
 author: "Ting-Ting, Wu"
 date: "2025-09-27"
-categories: [HAI, R]
+categories: [HAI, R, Germany]
+description: "Germany’s HAI burden in 2011 headline numbers, which infections drive it, and why per-population burden looks high."
+page-layout: full
 ---
+
+  Germany shows **lower hospital HAI prevalence** than the EU/EEA average but paradoxically a **higher burden per population**. This post answers three questions: 
+  
+  - *How large* is the burden (cases, deaths, DALYs)?  
+  - *Which HAI types* drive it?  
+  - *What actions* follow for prevention?
+
+## Data description
+
+- **The analysis** draws on estimates produced with the **Burden of Healthcare-Associated Infections (BHAI)** workflow.
+- **Data sources:** the **2011** German **point-prevalence survey (PPS)** and the **2011-2012** EU/EEA PPS.
+- **Download:** data and supplementary materials are available from [Eurosurveillance](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2019.24.46.1900135#supplementary_data).
+- **HAI types included:**  
+  - **HAP** - healthcare-associated pneumonia  
+  - **BSI** - primary bloodstream infection  
+  - **UTI** - urinary tract infection  
+  - **SSI** - surgical-site infection  
+  - **CDI** - *Clostridioides difficile* infection
+  
+- **Reporting format:** annual estimates; some results shown **per 100,000 people**; values are **medians** with **95% uncertainty intervals**.
+
+- **How numbers are produced (see @fig-workflow):**  
+  1. **Prevalence in hospital** from PPS
+  2. Convert to **hospital incidence** via a modified **Rhame-Sudderth** formula using **length of infection (LOI)**  
+  3. **Scale to population** using national **hospital discharges** and **population size**  
+  4. **Stratify by age/sex** using the PPS distribution  
+  5. **Adjust for comorbidity** (McCabe classes) and estimate **YLL**, **YLD**, and **DALYs**.
+
+```{r}
+#| label: fig-workflow
+#| fig-cap: "Overview of the BHAI workflow: from PPS prevalence to hospital incidence, population scaling, stratification, comorbidity adjustment, and DALY estimation."
+#| fig-align: center
+#| out-width: "100%"
+#| echo: false
+knitr::include_graphics("Image/workflow.png")
+```
+
+@tbl-glossary gives a short glossary.
+
+```{r}
+#| label: tbl-glossary
+#| tbl-cap: "Glossary: definitions of terms used in this post"
+#| echo: false
+knitr::kable(
+  data.frame(
+    Term = c("HAI","PPS","BHAI","Attributable deaths","DALY","YLL","YLD"),
+    Meaning = c(
+      "Healthcare-associated infection (acquired in healthcare)",
+      "Point-prevalence survey: one-day snapshot across hospitals",
+      "Workflow that turns PPS snapshots into annual burden estimates",
+      "Deaths caused by the infection (not just deaths among infected patients)",
+      "Overall burden: disability-adjusted life years = YLL + YLD",
+      "Years of life lost due to premature death",
+      "Years lived with disability due to illness"
+    )
+  )
+)
+```
