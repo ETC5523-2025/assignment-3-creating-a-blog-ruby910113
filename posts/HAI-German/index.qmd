@@ -7,11 +7,7 @@ description: "Germany’s HAI burden in 2011 headline numbers, which infections 
 page-layout: full
 ---
 
-  Germany shows **lower hospital HAI prevalence** than the EU/EEA average but paradoxically a **higher burden per population**. This post answers three questions: 
-  
-  - *How large* is the burden (cases, deaths, DALYs)?  
-  - *Which HAI types* drive it?  
-  - *What actions* follow for prevention?
+Germany reports a lower on-ward HAI prevalence than the EU/EEA average yet a higher burden per population. This post summarises Zacher et al. (2019): how big the burden is (cases, deaths, DALYs), which HAI types drive it, and why Germany’s per-capita rates end up higher despite lower ward-level prevalence.
 
 ## Data description
 
@@ -25,24 +21,6 @@ page-layout: full
   - **SSI** - surgical-site infection  
   - **CDI** - *Clostridioides difficile* infection
   
-- **Reporting format:** annual estimates; some results shown **per 100,000 people**; values are **medians** with **95% uncertainty intervals**.
-
-- **How numbers are produced (see @fig-workflow):**  
-  1. **Prevalence in hospital** from PPS
-  2. Convert to **hospital incidence** via a modified **Rhame-Sudderth** formula using **length of infection (LOI)**  
-  3. **Scale to population** using national **hospital discharges** and **population size**  
-  4. **Stratify by age/sex** using the PPS distribution  
-  5. **Adjust for comorbidity** (McCabe classes) and estimate **YLL**, **YLD**, and **DALYs**.
-
-```{r}
-#| label: fig-workflow
-#| fig-cap: "Overview of the BHAI workflow: from PPS prevalence to hospital incidence, population scaling, stratification, comorbidity adjustment, and DALY estimation."
-#| fig-align: center
-#| out-width: "100%"
-#| echo: false
-knitr::include_graphics("Image/workflow.png")
-```
-
 @tbl-glossary gives a short glossary.
 
 ```{r}
@@ -64,3 +42,114 @@ knitr::kable(
   )
 )
 ```
+  
+- **Reporting format:** annual estimates; some results shown **per 100,000 people**; values are **medians** with **95% uncertainty intervals**.
+
+- **How numbers are produced (see @fig-workflow):**  
+  1. **Prevalence in hospital** from PPS
+  2. Convert to **hospital incidence** via a modified **Rhame-Sudderth** formula using **length of infection (LOI)**  
+  3. **Scale to population** using national **hospital discharges** and **population size**  
+  4. **Stratify by age/sex** using the PPS distribution  
+  5. **Adjust for comorbidity** (McCabe classes) and estimate **YLL**, **YLD**, and **DALYs**.
+
+```{r}
+#| label: fig-workflow
+#| fig-cap: "Overview of the BHAI workflow: from PPS prevalence to hospital incidence, population scaling, stratification, comorbidity adjustment, and DALY estimation."
+#| fig-align: center
+#| out-width: "100%"
+#| echo: false
+knitr::include_graphics("Image/workflow.png")
+```
+
+## Scale and drivers of Germany’s HAI burden
+  
+::: {.clearfix}
+::: {.float-right}
+```{r}
+#| label: fig-bubbles
+#| fig-cap: "Germany 2011: cases vs attributable deaths by HAI type (bubble area ∝ DALYs)."
+#| fig-align: center
+#| echo: false
+#| fig-classes: ["float-right"]
+knitr::include_graphics("Image/bubbles.png")
+```
+:::
+How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total—about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany.
+<br><br>
+@fig-bubbles shows HAP and BSI in the high-death, high-burden corner.
+
+- HAP (pneumonia) and BSI (primary bloodstream infection) sit in the high-death, high-burden corner. Together they account for ≈ half of total DALYs while being only ~28% of cases. In short: fewer cases, but much more severe.
+
+- UTI has the most cases but far fewer deaths per case, so its share of total DALYs is smaller.
+
+- SSI is mid-range; CDI has relatively low case counts and deaths but still adds visible DALYs, and Germany’s CDI burden is higher than the EU/EEA average in the paper’s comparisons.
+:::
+
+Burden means DALYs, the sum of years of life lost (YLL) and years lived with disability (YLD); YLL predominates for HAP and BSI (reflecting mortality), whereas YLD makes up a larger share for UTI and CDI (reflecting prolonged morbidity), so reducing a relatively small number of severe HAP/BSI cases can lower total DALYs more than trimming many milder UTIs.
+
+## Per-capita HAI burden (per 100,000) by infection type: Germany (PPS & convenience) vs EU/EEA, 2011-2012
+
+@fig-per100k puts Germany (representative PPS and convenience samples) and the EU/EEA on the same per-100,000 people scale, side-by-side for each infection type (HAP, UTI, BSI, SSI, CDI) and for three metrics: HAIs, attributable deaths, and DALYs. It closes the loop on “how big is the burden” and sets up the population comparison discussed next.
+
+```{r}
+#| label: fig-per100k
+#| fig-cap: "Per-capita HAI burden (per 100,000) by infection type: Germany (representative PPS and convenience) vs EU/EEA, 2011-2012."
+#| fig-alt: "Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA."
+#| fig-align: center
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics("Image/table.png")
+```
+
+Germany’s representative PPS shows 592 HAIs, 20.1 deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% deaths, and +6% DALYs, confirming a higher per-capita burden.
+
+Which infections explain the gap?
+
+- UTI: Higher in Germany across all three measures (e.g., 265 vs 175 HAIs/100k; 83 vs 57 DALYs/100k). A primary driver of the per-capita gap.
+
+- CDI: Markedly higher in Germany (45 vs 16 HAIs/100k; 26 vs 10 DALYs/100k). The second key driver.
+
+- BSI: Germany shows more HAIs and deaths/100k (33 vs 22; 4.8 vs 3.3), but similar DALYs (72 vs 76), so it contributes to mortality differences more than total DALYs.
+
+- HAP: Lower in Germany than EU/EEA across metrics (e.g., 86 vs 110 DALYs/100k), so it does not explain the gap.
+
+- SSI: Similar between Germany and EU/EEA (≈ 36 vs 35 DALYs/100k), a minor player.
+
+All DALYs/100k rise to ~359 (from 308), and several types increase, suggesting case-mix/hospital type can push per-capita estimates upward.
+
+Germany’s per-person rates look higher for two reasons: UTIs and Clostridioides difficile make up a larger share of infections, and hospital use is high. Even if a smaller share of inpatients have an HAI at any moment, the large number of admissions raises the per-100,000 rates once incidence is scaled to the population. To reduce the burden, prioritise prevention of pneumonia and bloodstream infections, minimise catheter use and apply antimicrobial stewardship to curb UTIs and C. difficile, and reduce avoidable admissions and lengths of stay to limit exposure.
+
+## The per-capita paradox: why Germany looks higher
+
+Despite lower on-ward prevalence, Germany ends up with higher deaths and DALYs per 100,000 people than the EU/EEA once the estimates are scaled to the population. The comparison below shows where that difference comes from.
+
+In @fig-compare, the left panel shows attributable deaths per 100,000 by HAI type, and the right panel shows DALYs per 100,000. 
+
+Germany sits above the EU/EEA mainly for UTI and CDI, is similar for BSI, and is lower for HAP. This means the per-capita gap reflects a national infection mix (more UTI/CDI), not an across-the-board increase for every HAI.
+
+```{r}
+#| label: fig-compare 
+#| fig-cap: "Germany vs EU/EEA (2011-2012): attributable deaths and DALYs per 100,000 population."
+#| fig-align: center
+#| out-width: "90%" 
+#| echo: false 
+
+knitr::include_graphics("Image/compare.png")
+```
+
+In @fig-age, the top panel (A and B) shows total DALYs by age and sex, and the bottom panel (C and D) shows DALYs per 100,000 by age and sex. 
+
+The patterns are broadly similar in Germany and the EU/EEA. Across ages, YLL dominates for HAP and BSI, while YLD is a larger share for UTI and CDI, which means the severity mix looks comparable. The similar per-age, per-sex shapes also suggest the higher per-capita burden in Germany is not mainly due to a different age & sex distribution. It fits better with higher hospital utilisation and bed numbers: when more people are admitted, population-scaled rates rise even if on-ward prevalence is lower.
+
+```{r}
+#| label: fig-age
+#| fig-cap: "Age & sex view of burden. Top: total DALYs by age and sex. Bottom: DALYs per 100,000 by age and sex (Germany vs EU/EEA)."
+#| fig-align: center
+#| out-width: "90%" 
+#| echo: false 
+
+knitr::include_graphics("Image/age.png")
+```
+
+Germany’s per-person numbers look higher because UTIs and C. difficile make up a larger share of infections nationally and many people are hospitalised. To reduce the burden, focus on preventing pneumonia and bloodstream infections (big YLL gains), keep catheters to a minimum and use antibiotics wisely to curb UTI/CDI, and reduce avoidable admissions and lengths of stay to limit exposure.

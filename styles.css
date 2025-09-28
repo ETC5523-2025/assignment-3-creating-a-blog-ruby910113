@@ -19,3 +19,14 @@ h1, h2 {
   padding-top: 0.6rem;
   margin-top: 1.2rem;
 }
+
+.float-right {
+  float: right;
+  width: 45%;
+  margin: .25rem 0 1rem 1rem;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
