@@ -153,3 +153,7 @@ knitr::include_graphics("Image/age.png")
 ```
 
 Germany’s per-person numbers look higher because UTIs and C. difficile make up a larger share of infections nationally and many people are hospitalised. To reduce the burden, focus on preventing pneumonia and bloodstream infections (big YLL gains), keep catheters to a minimum and use antibiotics wisely to curb UTI/CDI, and reduce avoidable admissions and lengths of stay to limit exposure.
+
+## Conclusion
+
+In 2011, Germany faced a serious burden from hospital-acquired infections, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to prevent pneumonia and bloodstream infections (they drive most years of life lost), limit unnecessary catheter use and use antibiotics wisely to cut UTIs and C. difficile, and reduce avoidable admissions and hospital days to lower exposure.
