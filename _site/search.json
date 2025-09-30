@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "posts/HAI-German/index.html",
+    "href": "posts/HAI-German/index.html",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "",
+    "text": "Germany reports a lower on-ward HAI prevalence than the EU/EEA average yet a higher burden per population. This post summarises Zacher et al. (2019): how big the burden is (cases, deaths, DALYs), which HAI types drive it, and why Germany’s per-capita rates end up higher despite lower ward-level prevalence."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#data-description",
+    "href": "posts/HAI-German/index.html#data-description",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "Data description",
+    "text": "Data description\n\nThe analysis draws on estimates produced with the Burden of Healthcare-Associated Infections (BHAI) workflow.\nData sources: the 2011 German point-prevalence survey (PPS) and the 2011-2012 EU/EEA PPS.\nDownload: data and supplementary materials are available from Eurosurveillance.\nHAI types included:\n\nHAP - healthcare-associated pneumonia\n\nBSI - primary bloodstream infection\n\nUTI - urinary tract infection\n\nSSI - surgical-site infection\n\nCDI - Clostridioides difficile infection\n\n\nTable 1 gives a short glossary.\n\n\n\n\nTable 1: Glossary: definitions of terms used in this post\n\n\n\n\n\n\n\n\n\n\nTerm\nMeaning\n\n\n\n\nHAI\nHealthcare-associated infection (acquired in healthcare)\n\n\nPPS\nPoint-prevalence survey: one-day snapshot across hospitals\n\n\nBHAI\nWorkflow that turns PPS snapshots into annual burden estimates\n\n\nAttributable deaths\nDeaths caused by the infection (not just deaths among infected patients)\n\n\nDALY\nOverall burden: disability-adjusted life years = YLL + YLD\n\n\nYLL\nYears of life lost due to premature death\n\n\nYLD\nYears lived with disability due to illness\n\n\n\n\n\n\n\n\n\nReporting format: annual estimates; some results shown per 100,000 people; values are medians with 95% uncertainty intervals.\nHow numbers are produced (see Figure 1):\n\nPrevalence in hospital from PPS\nConvert to hospital incidence via a modified Rhame-Sudderth formula using length of infection (LOI)\n\nScale to population using national hospital discharges and population size\n\nStratify by age/sex using the PPS distribution\n\nAdjust for comorbidity (McCabe classes) and estimate YLL, YLD, and DALYs.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Overview of the BHAI workflow: from PPS prevalence to hospital incidence, population scaling, stratification, comorbidity adjustment, and DALY estimation."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#scale-and-drivers-of-germanys-hai-burden",
+    "href": "posts/HAI-German/index.html#scale-and-drivers-of-germanys-hai-burden",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "Scale and drivers of Germany’s HAI burden",
+    "text": "Scale and drivers of Germany’s HAI burden\n\n\n\n\n\n\n\n\n\n\nFigure 2: Germany 2011: cases vs attributable deaths by HAI type (bubble area ∝ DALYs).\n\n\n\n\n\n\nHow big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total—about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany.  Figure 2 shows HAP and BSI in the high-death, high-burden corner.\n\nHAP (pneumonia) and BSI (primary bloodstream infection) sit in the high-death, high-burden corner. Together they account for ≈ half of total DALYs while being only ~28% of cases. In short: fewer cases, but much more severe.\nUTI has the most cases but far fewer deaths per case, so its share of total DALYs is smaller.\nSSI is mid-range; CDI has relatively low case counts and deaths but still adds visible DALYs, and Germany’s CDI burden is higher than the EU/EEA average in the paper’s comparisons.\n\n\nBurden means DALYs, the sum of years of life lost (YLL) and years lived with disability (YLD); YLL predominates for HAP and BSI (reflecting mortality), whereas YLD makes up a larger share for UTI and CDI (reflecting prolonged morbidity), so reducing a relatively small number of severe HAP/BSI cases can lower total DALYs more than trimming many milder UTIs."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012",
+    "href": "posts/HAI-German/index.html#per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "Per-capita HAI burden (per 100,000) by infection type: Germany (PPS & convenience) vs EU/EEA, 2011-2012",
+    "text": "Per-capita HAI burden (per 100,000) by infection type: Germany (PPS & convenience) vs EU/EEA, 2011-2012\nFigure 3 puts Germany (representative PPS and convenience samples) and the EU/EEA on the same per-100,000 people scale, side-by-side for each infection type (HAP, UTI, BSI, SSI, CDI) and for three metrics: HAIs, attributable deaths, and DALYs. It closes the loop on “how big is the burden” and sets up the population comparison discussed next.\n\n\n\n\n\n\n\n\nFigure 3: Per-capita HAI burden (per 100,000) by infection type: Germany (representative PPS and convenience) vs EU/EEA, 2011-2012.\n\n\n\n\n\nGermany’s representative PPS shows 592 HAIs, 20.1 attributable deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% attributable deaths, and +6% DALYs, confirming a higher per-capita burden.\nWhich infections explain the gap?\n\nUTI: Higher in Germany across all three measures (e.g., 265 vs 175 HAIs/100k; 83 vs 57 DALYs/100k). A primary driver of the per-capita gap.\nCDI: Markedly higher in Germany (45 vs 16 HAIs/100k; 26 vs 10 DALYs/100k). The second key driver.\nBSI: Germany shows more HAIs and deaths/100k (33 vs 22; 4.8 vs 3.3), but similar DALYs (72 vs 76), so it contributes to mortality differences more than total DALYs.\nHAP: Lower in Germany than EU/EEA across metrics (e.g., 86 vs 110 DALYs/100k), so it does not explain the gap.\nSSI: Similar between Germany and EU/EEA (≈ 36 vs 35 DALYs/100k), a minor player.\n\nIn the German convenience sample, total DALYs/100k ≈ 359 (vs 308 in the representative PPS), suggesting case-mix effects."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#the-per-capita-paradox-why-germany-looks-higher",
+    "href": "posts/HAI-German/index.html#the-per-capita-paradox-why-germany-looks-higher",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "The per-capita paradox: why Germany looks higher",
+    "text": "The per-capita paradox: why Germany looks higher\nDespite lower on-ward prevalence, Germany ends up with higher deaths and DALYs per 100,000 people than the EU/EEA once the estimates are scaled to the population. The comparison below shows where that difference comes from.\nIn Figure 4, the left panel shows attributable deaths per 100,000 by HAI type, and the right panel shows DALYs per 100,000.\nGermany sits above the EU/EEA mainly for UTI and CDI, is similar for BSI, and is lower for HAP. This means the per-capita gap reflects a national infection mix (more UTI/CDI), not an across-the-board increase for every HAI.\n\n\n\n\n\n\n\n\nFigure 4: Germany vs EU/EEA (2011-2012): attributable deaths and DALYs per 100,000 population.\n\n\n\n\n\nIn Figure 5, the top panel (A and B) shows total DALYs by age and sex, and the bottom panel (C and D) shows DALYs per 100,000 by age and sex.\nThe patterns are broadly similar in Germany and the EU/EEA. Across ages, YLL dominates for HAP and BSI, while YLD is a larger share for UTI and CDI, which means the severity mix looks comparable. The similar per-age, per-sex shapes also suggest the higher per-capita burden in Germany is not mainly due to a different age & sex distribution. It fits better with higher hospital utilisation and bed numbers: when more people are admitted, population-scaled rates rise even if on-ward prevalence is lower.\n\n\n\n\n\n\n\n\nFigure 5: Age & sex view of burden. Top: total DALYs by age and sex. Bottom: DALYs per 100,000 by age and sex (Germany vs EU/EEA).\n\n\n\n\n\nGermany’s per-person numbers look higher because UTIs and C. difficile make up a larger share of infections nationally and many people are hospitalised. To reduce the burden, focus on preventing pneumonia and bloodstream infections (big YLL gains), keep catheters to a minimum and use antibiotics wisely to curb UTI/CDI, and reduce avoidable admissions and lengths of stay to limit exposure."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#conclusion",
+    "href": "posts/HAI-German/index.html#conclusion",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn 2011, Germany faced a serious burden from hospital-acquired infections, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to prevent pneumonia and bloodstream infections (they drive most years of life lost), limit unnecessary catheter use and use antibiotics wisely to cut UTIs and C. difficile, and reduce avoidable admissions and hospital days to lower exposure."
+  },
+  {
+    "objectID": "posts/HAI-German/index.html#reference",
+    "href": "posts/HAI-German/index.html#reference",
+    "title": "Germany’s Hidden Hospital Burden: What HAIs Really Cost",
+    "section": "Reference",
+    "text": "Reference\nZacher Benedikt, Haller Sebastian, Willrich Niklas, Walter Jan, Abu Sin Muna, Cassini Alessandro, Plachouras Diamantis, Suetens Carl, Behnke Michael, Gastmeier Petra, Wieler Lothar H., Eckmanns Tim. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):pii=1900135. https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135\nXie Y (2025). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.50, https://yihui.org/knitr/."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Germany’s Hidden Hospital Burden: What HAIs Really Cost\n\n\n\nHAI\n\nR\n\nGermany\n\n\n\nGermany’s HAI burden in 2011 headline numbers, which infections drive it, and why per-population burden looks high.\n\n\n\n\n\nSep 27, 2025\n\n\nTing-Ting, Wu\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Ting-Ting, Wu",
+    "section": "",
+    "text": "Hi, my name is Ting-Ting Wu, but you can also call me Ruby (I actually prefer Ruby).\nI’m Taiwanese and did my undergraduate studies in Taiwan. After finishing my studies in Auckland in 2023 and 2024, I came to Australia in 2025 to continue my education.\nMy interests include hiking, traveling, and watching anime. Feel free to reach out if you’d like to hang out or go on an adventure together!!!"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Ting-Ting, Wu",
+    "section": "Education",
+    "text": "Education\nMonash University\nMaster of Business Analytics\nMar 2025 - Present | Melbourne, Australia\nUniversity of Auckland\nExchange Program - Business Administration\nJul 2023 - Jul 2024 | Auckland, New Zealand\nProvidence University\nBachelor of International Business Administration\nJul 2021 - May 2023 | Taichung, Taiwan"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Ting-Ting, Wu",
+    "section": "Experience",
+    "text": "Experience\nPwC Taiwan\nAccounting Intern\nDec 2024 - Feb 2025 | Taichung, Taiwan\nRhinoshield\nFinance & Accounting Intern\nFeb 2022 - May 2022 | Taichung, Taiwan"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploring Data with Ting-Ting",
+    "section": "",
+    "text": "This site collects my work in data analysis and visualization. Beyond coursework, I’ll keep adding personal projects, learning notes, and experimental ideas, turning data into clear stories with an emphasis on reproducibility and versioned workflows.\nYou’ll find:\n- Data cleaning and exploratory analysis (EDA)\n- Visualization and communication\n- Spatial and time-series analyses across domains\nStart with the blog 👇\nEnter the Blog →"
+  }
+]

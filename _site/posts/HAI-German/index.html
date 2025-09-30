@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ting-Ting, Wu">
+<meta name="dcterms.date" content="2025-09-27">
+<meta name="description" content="Germany’s HAI burden in 2011 headline numbers, which infections drive it, and why per-population burden looks high.">
+
+<title>Germany’s Hidden Hospital Burden: What HAIs Really Cost – Exploring Data with Ting-Ting</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f9e6e4d29af3f5f6ee06eaf03ed5edd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Exploring Data with Ting-Ting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ruby910113"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ting-ting-wu-537144387/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Germany’s Hidden Hospital Burden: What HAIs Really Cost</h1>
+                  <div>
+        <div class="description">
+          Germany’s HAI burden in 2011 headline numbers, which infections drive it, and why per-population burden looks high.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">HAI</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Germany</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ting-Ting, Wu </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 27, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link active" data-scroll-target="#data-description">Data description</a></li>
+  <li><a href="#scale-and-drivers-of-germanys-hai-burden" id="toc-scale-and-drivers-of-germanys-hai-burden" class="nav-link" data-scroll-target="#scale-and-drivers-of-germanys-hai-burden">Scale and drivers of Germany’s HAI burden</a></li>
+  <li><a href="#per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012" id="toc-per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012" class="nav-link" data-scroll-target="#per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012">Per-capita HAI burden (per 100,000) by infection type: Germany (PPS &amp; convenience) vs EU/EEA, 2011-2012</a></li>
+  <li><a href="#the-per-capita-paradox-why-germany-looks-higher" id="toc-the-per-capita-paradox-why-germany-looks-higher" class="nav-link" data-scroll-target="#the-per-capita-paradox-why-germany-looks-higher">The per-capita paradox: why Germany looks higher</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<p>Germany reports a lower on-ward HAI prevalence than the EU/EEA average yet a higher burden per population. This post summarises Zacher et al.&nbsp;(2019): how big the burden is (cases, deaths, DALYs), which HAI types drive it, and why Germany’s per-capita rates end up higher despite lower ward-level prevalence.</p>
+<section id="data-description" class="level2">
+<h2 class="anchored" data-anchor-id="data-description">Data description</h2>
+<ul>
+<li><strong>The analysis</strong> draws on estimates produced with the <strong>Burden of Healthcare-Associated Infections (BHAI)</strong> workflow.</li>
+<li><strong>Data sources:</strong> the <strong>2011</strong> German <strong>point-prevalence survey (PPS)</strong> and the <strong>2011-2012</strong> EU/EEA PPS.</li>
+<li><strong>Download:</strong> data and supplementary materials are available from <a href="https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2019.24.46.1900135#supplementary_data">Eurosurveillance</a>.</li>
+<li><strong>HAI types included:</strong>
+<ul>
+<li><strong>HAP</strong> - healthcare-associated pneumonia<br>
+</li>
+<li><strong>BSI</strong> - primary bloodstream infection<br>
+</li>
+<li><strong>UTI</strong> - urinary tract infection<br>
+</li>
+<li><strong>SSI</strong> - surgical-site infection<br>
+</li>
+<li><strong>CDI</strong> - <em>Clostridioides difficile</em> infection</li>
+</ul></li>
+</ul>
+<p><a href="#tbl-glossary" class="quarto-xref">Table&nbsp;1</a> gives a short glossary.</p>
+<div class="cell">
+<div id="tbl-glossary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-glossary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Glossary: definitions of terms used in this post
+</figcaption>
+<div aria-describedby="tbl-glossary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">HAI</td>
+<td style="text-align: left;">Healthcare-associated infection (acquired in healthcare)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PPS</td>
+<td style="text-align: left;">Point-prevalence survey: one-day snapshot across hospitals</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BHAI</td>
+<td style="text-align: left;">Workflow that turns PPS snapshots into annual burden estimates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Attributable deaths</td>
+<td style="text-align: left;">Deaths caused by the infection (not just deaths among infected patients)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY</td>
+<td style="text-align: left;">Overall burden: disability-adjusted life years = YLL + YLD</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">YLL</td>
+<td style="text-align: left;">Years of life lost due to premature death</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">YLD</td>
+<td style="text-align: left;">Years lived with disability due to illness</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<ul>
+<li><p><strong>Reporting format:</strong> annual estimates; some results shown <strong>per 100,000 people</strong>; values are <strong>medians</strong> with <strong>95% uncertainty intervals</strong>.</p></li>
+<li><p><strong>How numbers are produced (see <a href="#fig-workflow" class="quarto-xref">Figure&nbsp;1</a>):</strong></p>
+<ol type="1">
+<li><strong>Prevalence in hospital</strong> from PPS</li>
+<li>Convert to <strong>hospital incidence</strong> via a modified <strong>Rhame-Sudderth</strong> formula using <strong>length of infection (LOI)</strong><br>
+</li>
+<li><strong>Scale to population</strong> using national <strong>hospital discharges</strong> and <strong>population size</strong><br>
+</li>
+<li><strong>Stratify by age/sex</strong> using the PPS distribution<br>
+</li>
+<li><strong>Adjust for comorbidity</strong> (McCabe classes) and estimate <strong>YLL</strong>, <strong>YLD</strong>, and <strong>DALYs</strong>.</li>
+</ol></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Image/workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Overview of the BHAI workflow: from PPS prevalence to hospital incidence, population scaling, stratification, comorbidity adjustment, and DALY estimation.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="scale-and-drivers-of-germanys-hai-burden" class="level2">
+<h2 class="anchored" data-anchor-id="scale-and-drivers-of-germanys-hai-burden">Scale and drivers of Germany’s HAI burden</h2>
+<div class="clearfix">
+<div class="float-right">
+<div class="cell" data-layout-align="center" data-fig-classes="float-right">
+<div class="cell-output-display">
+<div id="fig-bubbles" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bubbles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Image/bubbles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="436">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bubbles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Germany 2011: cases vs attributable deaths by HAI type (bubble area ∝ DALYs).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total—about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany. <br><br> <a href="#fig-bubbles" class="quarto-xref">Figure&nbsp;2</a> shows HAP and BSI in the high-death, high-burden corner.</p>
+<ul>
+<li><p>HAP (pneumonia) and BSI (primary bloodstream infection) sit in the high-death, high-burden corner. Together they account for ≈ half of total DALYs while being only ~28% of cases. In short: fewer cases, but much more severe.</p></li>
+<li><p>UTI has the most cases but far fewer deaths per case, so its share of total DALYs is smaller.</p></li>
+<li><p>SSI is mid-range; CDI has relatively low case counts and deaths but still adds visible DALYs, and Germany’s CDI burden is higher than the EU/EEA average in the paper’s comparisons.</p></li>
+</ul>
+</div>
+<p>Burden means DALYs, the sum of years of life lost (YLL) and years lived with disability (YLD); YLL predominates for HAP and BSI (reflecting mortality), whereas YLD makes up a larger share for UTI and CDI (reflecting prolonged morbidity), so reducing a relatively small number of severe HAP/BSI cases can lower total DALYs more than trimming many milder UTIs.</p>
+</section>
+<section id="per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012" class="level2">
+<h2 class="anchored" data-anchor-id="per-capita-hai-burden-per-100000-by-infection-type-germany-pps-convenience-vs-eueea-2011-2012">Per-capita HAI burden (per 100,000) by infection type: Germany (PPS &amp; convenience) vs EU/EEA, 2011-2012</h2>
+<p><a href="#fig-per100k" class="quarto-xref">Figure&nbsp;3</a> puts Germany (representative PPS and convenience samples) and the EU/EEA on the same per-100,000 people scale, side-by-side for each infection type (HAP, UTI, BSI, SSI, CDI) and for three metrics: HAIs, attributable deaths, and DALYs. It closes the loop on “how big is the burden” and sets up the population comparison discussed next.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-per100k" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-per100k-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Image/table.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-per100k-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Per-capita HAI burden (per 100,000) by infection type: Germany (representative PPS and convenience) vs EU/EEA, 2011-2012.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Germany’s representative PPS shows 592 HAIs, 20.1 attributable deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% attributable deaths, and +6% DALYs, confirming a higher per-capita burden.</p>
+<p>Which infections explain the gap?</p>
+<ul>
+<li><p>UTI: Higher in Germany across all three measures (e.g., 265 vs 175 HAIs/100k; 83 vs 57 DALYs/100k). A primary driver of the per-capita gap.</p></li>
+<li><p>CDI: Markedly higher in Germany (45 vs 16 HAIs/100k; 26 vs 10 DALYs/100k). The second key driver.</p></li>
+<li><p>BSI: Germany shows more HAIs and deaths/100k (33 vs 22; 4.8 vs 3.3), but similar DALYs (72 vs 76), so it contributes to mortality differences more than total DALYs.</p></li>
+<li><p>HAP: Lower in Germany than EU/EEA across metrics (e.g., 86 vs 110 DALYs/100k), so it does not explain the gap.</p></li>
+<li><p>SSI: Similar between Germany and EU/EEA (≈ 36 vs 35 DALYs/100k), a minor player.</p></li>
+</ul>
+<p>In the German convenience sample, total DALYs/100k ≈ 359 (vs 308 in the representative PPS), suggesting case-mix effects.</p>
+</section>
+<section id="the-per-capita-paradox-why-germany-looks-higher" class="level2">
+<h2 class="anchored" data-anchor-id="the-per-capita-paradox-why-germany-looks-higher">The per-capita paradox: why Germany looks higher</h2>
+<p>Despite lower on-ward prevalence, Germany ends up with higher deaths and DALYs per 100,000 people than the EU/EEA once the estimates are scaled to the population. The comparison below shows where that difference comes from.</p>
+<p>In <a href="#fig-compare" class="quarto-xref">Figure&nbsp;4</a>, the left panel shows attributable deaths per 100,000 by HAI type, and the right panel shows DALYs per 100,000.</p>
+<p>Germany sits above the EU/EEA mainly for UTI and CDI, is similar for BSI, and is lower for HAP. This means the per-capita gap reflects a national infection mix (more UTI/CDI), not an across-the-board increase for every HAI.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-compare" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Image/compare.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Germany vs EU/EEA (2011-2012): attributable deaths and DALYs per 100,000 population.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In <a href="#fig-age" class="quarto-xref">Figure&nbsp;5</a>, the top panel (A and B) shows total DALYs by age and sex, and the bottom panel (C and D) shows DALYs per 100,000 by age and sex.</p>
+<p>The patterns are broadly similar in Germany and the EU/EEA. Across ages, YLL dominates for HAP and BSI, while YLD is a larger share for UTI and CDI, which means the severity mix looks comparable. The similar per-age, per-sex shapes also suggest the higher per-capita burden in Germany is not mainly due to a different age &amp; sex distribution. It fits better with higher hospital utilisation and bed numbers: when more people are admitted, population-scaled rates rise even if on-ward prevalence is lower.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-age" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Image/age.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Age &amp; sex view of burden. Top: total DALYs by age and sex. Bottom: DALYs per 100,000 by age and sex (Germany vs EU/EEA).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Germany’s per-person numbers look higher because UTIs and C. difficile make up a larger share of infections nationally and many people are hospitalised. To reduce the burden, focus on preventing pneumonia and bloodstream infections (big YLL gains), keep catheters to a minimum and use antibiotics wisely to curb UTI/CDI, and reduce avoidable admissions and lengths of stay to limit exposure.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In 2011, Germany faced a serious burden from hospital-acquired infections, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to prevent pneumonia and bloodstream infections (they drive most years of life lost), limit unnecessary catheter use and use antibiotics wisely to cut UTIs and C. difficile, and reduce avoidable admissions and hospital days to lower exposure.</p>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<p>Zacher Benedikt, Haller Sebastian, Willrich Niklas, Walter Jan, Abu Sin Muna, Cassini Alessandro, Plachouras Diamantis, Suetens Carl, Behnke Michael, Gastmeier Petra, Wieler Lothar H., Eckmanns Tim. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):pii=1900135. <a href="https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135" class="uri">https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135</a></p>
+<p>Xie Y (2025). <em>knitr: A General-Purpose Package for Dynamic Report Generation in R</em>. R package version 1.50, <a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/8d876f00-eaf5-48b3-8807-5a8f8548250a\.netlify\.app\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

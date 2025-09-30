@@ -1,0 +1,32 @@
+.navbar-dark, .quarto-title-banner {
+  background-color: #283618;
+  padding-top: 4rem;
+  padding-bottom: 2.2rem;}
+.quarto-title-banner .title { color: #fafaf7; }
+.quarto-title-banner .quarto-categories { color: #fafaf7; }
+.quarto-title-banner .description { color: #fafaf7; }
+
+body { background-color: #fafaf7; }
+img { border: 4px solid #283618; }
+h1, h2 {
+  color: #283618;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-weight: 600;
+}
+
+#education {
+  border-top: 1px solid rgba(17, 77, 45, 0.35);
+  padding-top: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.float-right {
+  float: right;
+  width: 45%;
+  margin: .25rem 0 1rem 1rem;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
