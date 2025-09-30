@@ -16,7 +16,7 @@ Germany reports a lower on-ward HAI prevalence than the EU/EEA average yet a hig
 
 - **The analysis** draws on estimates produced with the **Burden of Healthcare-Associated Infections (BHAI)** workflow.
 - **Data sources:** the **2011** German **point-prevalence survey (PPS)** and the **2011-2012** EU/EEA PPS.
-- **Download:** data and supplementary materials are available from [Eurosurveillance](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2019.24.46.1900135#supplementary_data).
+- **Download:** data and supplementary materials are available from [Eurosurveillance](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2019.24.46.1900135#supplementary_data), and the datasets plus analysis code used in the paper are bundled with the open-source BHAI R package on CRAN, enabling full reproduction of the Germany and EU/EEA estimates (<https://CRAN.R-project.org/package=BHAI>).
 - **HAI types included:**  
   - **HAP** - healthcare-associated pneumonia  
   - **BSI** - primary bloodstream infection  
@@ -162,5 +162,7 @@ In 2011, Germany faced a serious burden from hospital-acquired infections, causi
 ## Reference
 
 Zacher Benedikt, Haller Sebastian, Willrich Niklas, Walter Jan, Abu Sin Muna, Cassini Alessandro, Plachouras Diamantis, Suetens Carl, Behnke Michael, Gastmeier Petra, Wieler Lothar H., Eckmanns Tim. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):pii=1900135. <https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135>
+
+Zacher, B., & contributors. (2019–present). BHAI: Burden of Healthcare-Associated Infections (R package). CRAN. <https://CRAN.R-project.org/package=BHAI>
 
 Xie Y (2025). _knitr: A General-Purpose Package for Dynamic Report Generation in R_. R package version 1.50, <https://yihui.org/knitr/>.
