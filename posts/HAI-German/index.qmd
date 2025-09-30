@@ -105,7 +105,7 @@ Burden means DALYs, the sum of years of life lost (YLL) and years lived with dis
 knitr::include_graphics("Image/table.png")
 ```
 
-Germany’s representative PPS shows 592 HAIs, 20.1 deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% deaths, and +6% DALYs, confirming a higher per-capita burden.
+Germany’s representative PPS shows 592 HAIs, 20.1 attributable deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% attributable deaths, and +6% DALYs, confirming a higher per-capita burden.
 
 Which infections explain the gap?
 
@@ -119,9 +119,7 @@ Which infections explain the gap?
 
 - SSI: Similar between Germany and EU/EEA (≈ 36 vs 35 DALYs/100k), a minor player.
 
-All DALYs/100k rise to ~359 (from 308), and several types increase, suggesting case-mix/hospital type can push per-capita estimates upward.
-
-Germany’s per-person rates look higher for two reasons: UTIs and Clostridioides difficile make up a larger share of infections, and hospital use is high. Even if a smaller share of inpatients have an HAI at any moment, the large number of admissions raises the per-100,000 rates once incidence is scaled to the population. To reduce the burden, prioritise prevention of pneumonia and bloodstream infections, minimise catheter use and apply antimicrobial stewardship to curb UTIs and C. difficile, and reduce avoidable admissions and lengths of stay to limit exposure.
+In the German convenience sample, total DALYs/100k ≈ 359 (vs 308 in the representative PPS), suggesting case-mix effects.
 
 ## The per-capita paradox: why Germany looks higher
 
@@ -160,3 +158,9 @@ Germany’s per-person numbers look higher because UTIs and C. difficile make up
 ## Conclusion
 
 In 2011, Germany faced a serious burden from hospital-acquired infections, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to prevent pneumonia and bloodstream infections (they drive most years of life lost), limit unnecessary catheter use and use antibiotics wisely to cut UTIs and C. difficile, and reduce avoidable admissions and hospital days to lower exposure.
+
+## Reference
+
+Zacher Benedikt, Haller Sebastian, Willrich Niklas, Walter Jan, Abu Sin Muna, Cassini Alessandro, Plachouras Diamantis, Suetens Carl, Behnke Michael, Gastmeier Petra, Wieler Lothar H., Eckmanns Tim. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveill. 2019;24(46):pii=1900135. <https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135>
+
+Xie Y (2025). _knitr: A General-Purpose Package for Dynamic Report Generation in R_. R package version 1.50, <https://yihui.org/knitr/>.
