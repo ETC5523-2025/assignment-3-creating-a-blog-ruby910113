@@ -22,7 +22,7 @@ Germany reports a lower on-ward HAI prevalence than the EU/EEA average yet a hig
   - **BSI** - primary bloodstream infection  
   - **UTI** - urinary tract infection  
   - **SSI** - surgical-site infection  
-  - **CDI** - *Clostridioides difficile* infection
+  - **CDI** - Clostridioides difficile infection
   
 @tbl-glossary gives a short glossary.
 
@@ -105,9 +105,9 @@ Burden means DALYs, the sum of years of life lost (YLL) and years lived with dis
 knitr::include_graphics("Image/table.png")
 ```
 
-Germany’s representative PPS shows 592 HAIs, 20.1 attributable deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290. That’s roughly +27% HAIs, +31% attributable deaths, and +6% DALYs, confirming a higher per-capita burden.
+Germany’s representative PPS shows **592 HAIs, 20.1 attributable deaths, and 308 DALYs per 100k, versus the EU/EEA’s 468, 15.3, and 290**. That’s roughly **+27% HAIs, +31% attributable deaths, and +6% DALYs**, confirming a higher per-capita burden.
 
-Which infections explain the gap?
+**Which infections explain the gap?**
 
 - UTI: Higher in Germany across all three measures (e.g., 265 vs 175 HAIs/100k; 83 vs 57 DALYs/100k). A primary driver of the per-capita gap.
 
@@ -141,7 +141,7 @@ knitr::include_graphics("Image/compare.png")
 
 In @fig-age, the top panel (A and B) shows total DALYs by age and sex, and the bottom panel (C and D) shows DALYs per 100,000 by age and sex. 
 
-The patterns are broadly similar in Germany and the EU/EEA. Across ages, YLL dominates for HAP and BSI, while YLD is a larger share for UTI and CDI, which means the severity mix looks comparable. The similar per-age, per-sex shapes also suggest the higher per-capita burden in Germany is not mainly due to a different age & sex distribution. It fits better with higher hospital utilisation and bed numbers: when more people are admitted, population-scaled rates rise even if on-ward prevalence is lower.
+The patterns are broadly similar in Germany and the EU/EEA. Across ages, YLL dominates for HAP and BSI, while YLD is a larger share for UTI and CDI, which means the severity mix looks comparable. The similar per-age, per-sex shapes also suggest the higher per-capita burden in Germany is not mainly due to a different age & sex distribution. It fits better with higher hospital utilisation and bed numbers: **when more people are admitted, population-scaled rates rise even if on-ward prevalence is lower**.
 
 ```{r}
 #| label: fig-age
@@ -157,7 +157,7 @@ Germany’s per-person numbers look higher because UTIs and C. difficile make up
 
 ## Conclusion
 
-In 2011, Germany faced a serious burden from hospital-acquired infections, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to prevent pneumonia and bloodstream infections (they drive most years of life lost), limit unnecessary catheter use and use antibiotics wisely to cut UTIs and C. difficile, and reduce avoidable admissions and hospital days to lower exposure.
+In 2011, Germany faced a **serious burden from hospital-acquired infections**, causing many deaths and long-term ill-health. Even though a smaller share of patients has an infection on a given day than the EU/EEA average, the burden per person is higher because urinary tract infections and C. difficile are more common overall and hospital use is very high. The practical priorities are to **prevent pneumonia and bloodstream infections** (they drive most years of life lost), **limit unnecessary catheter use** and **use antibiotics** wisely to cut UTIs and C. difficile, and **reduce avoidable admissions and hospital days** to lower exposure.
 
 ## Reference
 

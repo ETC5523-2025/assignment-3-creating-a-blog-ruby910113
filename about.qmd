@@ -12,6 +12,9 @@ about:
     - icon: linkedin            
       text: LinkedIn
       href: https://www.linkedin.com/in/ting-ting-wu-537144387/
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/r.w.zzz
 ---
 
 Hi, my name is Ting-Ting Wu, but you can also call me Ruby (I actually prefer Ruby).
