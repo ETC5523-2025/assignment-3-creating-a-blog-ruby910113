@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f9e6e4d29af3f5f6ee06eaf03ed5edd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-d1897f967d4dc882e6c3c4aa210b578e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,6 +83,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Exploring Data with Ting-Ting</span>
     </a>
@@ -310,7 +313,7 @@ Figure&nbsp;2: Germany 2011: cases vs attributable deaths by HAI type (bubble ar
 </div>
 </div>
 </div>
-<p>How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total—about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany. <br><br> <a href="#fig-bubbles" class="quarto-xref">Figure&nbsp;2</a> shows HAP and BSI in the high-death, high-burden corner.</p>
+<p>How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total - <strong>about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people</strong>. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany. <br><br> <a href="#fig-bubbles" class="quarto-xref">Figure&nbsp;2</a> shows HAP and BSI in the high-death, high-burden corner.</p>
 <ul>
 <li><p>HAP (pneumonia) and BSI (primary bloodstream infection) sit in the high-death, high-burden corner. Together they account for ≈ half of total DALYs while being only ~28% of cases. In short: fewer cases, but much more severe.</p></li>
 <li><p>UTI has the most cases but far fewer deaths per case, so its share of total DALYs is smaller.</p></li>
@@ -324,7 +327,7 @@ Figure&nbsp;2: Germany 2011: cases vs attributable deaths by HAI type (bubble ar
 <p><a href="#fig-per100k" class="quarto-xref">Figure&nbsp;3</a> puts Germany (representative PPS and convenience samples) and the EU/EEA on the same per-100,000 people scale, side-by-side for each infection type (HAP, UTI, BSI, SSI, CDI) and for three metrics: HAIs, attributable deaths, and DALYs. It closes the loop on “how big is the burden” and sets up the population comparison discussed next.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-per100k" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA." data-fig-align="center">
+<div id="fig-per100k" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-per100k-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Image/table.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Table comparing HAIs, attributable deaths, and DALYs per 100,000 for HAP, UTI, BSI, SSI, CDI and All across German PPS, German convenience, and EU/EEA.">
@@ -449,13 +452,14 @@ Figure&nbsp;5: Age &amp; sex view of burden. Top: total DALYs by age and sex. Bo
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

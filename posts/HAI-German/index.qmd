@@ -77,7 +77,7 @@ knitr::include_graphics("Image/workflow.png")
 knitr::include_graphics("Image/bubbles.png")
 ```
 :::
-How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total—about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany.
+How big is the problem? In 2011 Germany, the study estimates ~478k HAI cases, ~16k attributable deaths, and ~249k DALYs in total - **about 592 HAIs, 20 deaths, and 308 DALYs per 100,000 people**. These headline numbers mean HAIs impose a larger population burden than many other communicable diseases in Germany.
 <br><br>
 @fig-bubbles shows HAP and BSI in the high-death, high-burden corner.
 
