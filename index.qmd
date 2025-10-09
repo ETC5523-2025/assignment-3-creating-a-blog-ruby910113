@@ -9,13 +9,7 @@ title-block-banner: false
 </p>
 <br>
 <br>
-<br>
 This site collects my work in **data analysis and visualization**. Beyond coursework, I’ll keep adding personal projects, learning notes, and experimental ideas, turning data into clear stories with an emphasis on **reproducibility** and **versioned workflows**.
-
-You’ll find:  
-- Data cleaning and exploratory analysis (EDA)  
-- Visualization and communication  
-- Spatial and time-series analyses across domains   
 
 Start with the blog 👇
 
